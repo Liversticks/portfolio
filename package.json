@@ -1,0 +1,17 @@
+{
+  "name": "liversticks-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy --formats=html,ejs,css",
+    "clean": "rmdir _site /s /q && rm -rf ./_site"
+  },
+  "keywords": [],
+  "author": "liversticks",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
