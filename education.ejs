@@ -1,0 +1,98 @@
+---
+layout: main.ejs
+title: My Education
+description: Where Oliver Xie studied/went to school
+courseCards:
+    - title: CMPT 470
+      subtitle: Web-based Information Systems
+      bullets:
+        - Learned about front-end fundamentals (markup, styling, client-side frameworks, mobile), HTTP, optimizing pages, security, and architecture.
+        - Explored the Python web2py server-side batteries-included framework and compared it with alternatives such as Django and ASP.NET Core.
+        - Built the authentication subsystem using Passport and session middleware and led feature integration for a gradebook/course planner team project written in Node.js using Express.
+    - title: CMPT 383
+      subtitle: Comparative Programming Languages
+      bullets:      
+        - Learned about functional programming, polyglot system design, and concurrency constructs.
+        - Implemented exercises using Haskell, Rust, and Go.
+        - Used SWIG to make the C++ Armadillo matrix manipulation library accessible via Python and web UI (Flask, JavaScript).
+    - title: CMPT 379
+      subtitle: Compilers
+      bullets:
+        - Learned about lexical analysis, parsing, semantic/context analysis, intermediate representations, code generation, and optimization.                    
+        - Implemented a compiler for a declarative, procedural language (Bilby) using Java - see the <a href="/projects">projects page</a> for more information.
+    - title: CMPT 371
+      subtitle: Networking I
+      bullets:
+        - Learned about protocols at the application layer (email, DNS, HTTP), transport layer (TCP), network layer (IP), and data link layer.
+        - Implemented socket programs using Python and profiled network communications using WireShark.
+    - title: CMPT 354
+      subtitle: Database Systems I
+      bullets:
+        - Learned about entity-relationship modelling, database schema design, normalization, and relational algebra.
+        - Used SQL Server (T-SQL) and SSMS on course exercises. 
+    - title: CMPT 353
+      subtitle: Computational Data Science
+      bullets:
+        - Learned about data pipelines, extract-transfer-load, statistical tests, machine learning, and data visualization.
+        - Used Python (NumPy, Pandas, Matplotlib, SciKit-Learn) and Apache Spark on course exercises.
+        - Analyzed win rates and player stats (kills/deaths/assists in matches) for DoTA 2.
+    - title: CMPT 308
+      subtitle: Computability and Complexity
+      bullets:
+        - Learned about Turing machines, decidability, Kolmogorov complexity, and NP-completeness.
+    - title: CMPT 300
+      subtitle: Operating Systems
+      bullets:
+        - Learned about processes, concurrency primitives, inter-process communication, memory, and file systems.
+        - Implemented a process scheduler, network text chat application, and ls-like file displayer in C.
+    - title: CMPT 295
+      subtitle: Introduction to Computer Systems
+      bullets:
+        - Learned about assembly language, memory addressing, and processor execution models.
+    - title: CMPT 276
+      subtitle: Introduction to Software Engineering
+      bullets:
+        - Learned about the software development life cycle, software architecture, creating user stories, and agile teamwork.
+        - Implemented a training management system for a corporate client using Node.js, Postgres, and EJS, greatly improving their manual Excel tracking. See the <a href="/projects">projects page</a> for more information.
+    - title: CMPT 225
+      subtitle: Data Structures and Programming
+      bullets:
+        - Learned about and implemented data structures/algorithms such as AVL trees, heaps, hash tables, and various sorting algorithms in C++.
+---
+<article>
+    <h1><%= title %></h1>
+    <img src="/images/SFU.png" alt="Simon Fraser University logo" />
+    <h2>Bachelor of Science in Computing Science</h2>
+    <h3>September 2019 - August 2023</h3>
+    <section id='academics'>
+        <h4>Academic Performance</h4>
+        <p>I currently have a 3.8 GPA and received the Dean's Honour Roll three times.</p>
+        <p>I am a recipient of the Undergraduate Scholars Entrance Scholarship (USES), a <em>full-ride scholarship </em>
+            that recognizes students of high academic achievement who are also involved in their communities.
+        </p>
+    </section>
+    <section id='coursework'>
+        <h4>Coursework</h4>
+        <p>While some courses are more theoretical and abstract than others, all of my courses helped me more deeply understand computing.</p>
+        <% courseCards.forEach(card => { %>
+            <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
+        <% }) %>
+    </section>
+    <section id='extracurriculars'>
+        <h4>Extracurriculars</h4>
+        <p>I served as the First-Year Representative for the SFU Computing Science Student Society (CSSS). As part of this eight-month role,
+            I planned two student social events; assisted in the running of a hackathon and biweekly board games nights; and managed access
+            to the the exam bank.
+        </p>
+        <p>As a CS Peer Tutor, I helped first and second-year students with their coursework while also fostering independent inquiry and analysis skills.
+            My ability to read and reason with others' code improved tremendously because I was doing that all the time. 
+        </p>
+        <p>I introduced new students to SFU as a HIVE Leader (virtual orientation leader) and Wayfinding Champion (tour guide). I always answered any inquiry future students had about academics,
+            locations, and social life at university and organized Q-and-A sessions/games for them.
+        </p>
+        <p>Continuing my public speaking experience from high school, I joined the Burnaby Mountain Toastmasters club where I delievered prepared/impromptu speeches
+            and helped run meetings as a club member.
+        </p>
+        <p>I played tenor saxophone for the SFU Jazz Band.</p>
+    </section>
+</article>
