@@ -10,11 +10,32 @@ main {
     margin: 0.5rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 480px) {
     .card-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
         grid-gap: 1rem;
+        margin: auto 1rem;
+    }
+
+    .bullet-card {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-media {
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    .card-media img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-media {
+        margin: 0.5rem;
     }
 }
 
@@ -53,11 +74,18 @@ main {
 
 .bullet-card h4 {
     font-size: 1rem;
+    font-weight: normal;
     margin: 0.25rem 0;
     display: flex;
     justify-content: left;
     align-content: center;
 }
+
+/*
+.bullet-card h4 a:link {
+    text-decoration: none;
+}
+*/
 
 /* Site Header */
 
