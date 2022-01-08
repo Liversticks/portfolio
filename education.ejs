@@ -76,7 +76,14 @@ courseCards:
         <p>While some courses are more theoretical and abstract than others, all of my courses helped me more deeply understand computing.</p>
         <div class="card-container">
           <% courseCards.forEach(card => { %>
-            <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
+            <%- include('_includes/layouts/card.ejs', { 
+              githubLink: null,
+              cardImageSrc: card.src,
+              cardImageAlt: card.alt,
+              cardTitle: card.title,
+              cardSubtitle: card.subtitle,
+              cardDates: card.dates,
+              cardBullets: card.bullets }) %>
           <% }) %>
         </div>
     </section>
