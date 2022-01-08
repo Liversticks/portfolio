@@ -38,7 +38,7 @@ awardCards:
     <div class="card-container">
       <% awardCards.forEach(card => { %>
         <%- include('_includes/layouts/card.ejs', { 
-          githubLink: null,
+          cardLinks: null,
           cardImageSrc: card.src,
           cardImageAlt: card.alt,
           cardTitle: card.title,

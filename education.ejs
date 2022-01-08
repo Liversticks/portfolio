@@ -3,59 +3,59 @@ layout: main.ejs
 title: My Education
 description: Where Oliver Xie studied/went to school
 courseCards:
-    - title: CMPT 470
-      subtitle: Web-based Information Systems
+    - title: Web-based Information Systems
+      subtitle: CMPT 470
       bullets:
         - Learned about front-end fundamentals (markup, styling, client-side frameworks, mobile), HTTP, optimizing pages, security, and architecture.
         - Explored the Python web2py server-side batteries-included framework and compared it with alternatives such as Django and ASP.NET Core.
         - Built the authentication subsystem using Passport and session middleware and led feature integration for a gradebook/course planner team project written in Node.js using Express.
-    - title: CMPT 383
-      subtitle: Comparative Programming Languages
+    - title: Comparative Programming Languages
+      subtitle: CMPT 383
       bullets:      
         - Learned about functional programming, polyglot system design, and concurrency constructs.
         - Implemented exercises using Haskell, Rust, and Go.
         - Used SWIG to make the C++ Armadillo matrix manipulation library accessible via Python and web UI (Flask, JavaScript).
-    - title: CMPT 379
-      subtitle: Compilers
+    - title: Compilers
+      subtitle: CMPT 379
       bullets:
         - Learned about lexical analysis, parsing, semantic/context analysis, intermediate representations, code generation, and optimization.                    
         - Implemented a compiler for a declarative, procedural language (Bilby) using Java - see the <a href="/projects">projects page</a> for more information.
-    - title: CMPT 371
-      subtitle: Networking I
+    - title: Networking I
+      subtitle: CMPT 371
       bullets:
         - Learned about protocols at the application layer (email, DNS, HTTP), transport layer (TCP), network layer (IP), and data link layer.
         - Implemented socket programs using Python and profiled network communications using WireShark.
-    - title: CMPT 354
-      subtitle: Database Systems I
+    - title: Database Systems I
+      subtitle: CMPT 354
       bullets:
         - Learned about entity-relationship modelling, database schema design, normalization, and relational algebra.
         - Used SQL Server (T-SQL) and SSMS on course exercises. 
-    - title: CMPT 353
-      subtitle: Computational Data Science
+    - title: Computational Data Science
+      subtitle: CMPT 353
       bullets:
         - Learned about data pipelines, extract-transfer-load, statistical tests, machine learning, and data visualization.
         - Used Python (NumPy, Pandas, Matplotlib, SciKit-Learn) and Apache Spark on course exercises.
         - Analyzed win rates and player stats (kills/deaths/assists in matches) for DoTA 2.
-    - title: CMPT 308
-      subtitle: Computability and Complexity
+    - title: Computability and Complexity
+      subtitle: CMPT 308
       bullets:
         - Learned about Turing machines, decidability, Kolmogorov complexity, and NP-completeness.
-    - title: CMPT 300
-      subtitle: Operating Systems
+    - title: Operating Systems
+      subtitle: CMPT 300
       bullets:
         - Learned about processes, concurrency primitives, inter-process communication, memory, and file systems.
         - Implemented a process scheduler, network text chat application, and ls-like file displayer in C.
-    - title: CMPT 295
-      subtitle: Introduction to Computer Systems
+    - title: Introduction to Computer Systems
+      subtitle: CMPT 295
       bullets:
         - Learned about assembly language, memory addressing, and processor execution models.
-    - title: CMPT 276
-      subtitle: Introduction to Software Engineering
+    - title: Introduction to Software Engineering
+      subtitle: CMPT 276
       bullets:
         - Learned about the software development life cycle, software architecture, creating user stories, and agile teamwork.
         - Implemented a training management system for a corporate client using Node.js, Postgres, and EJS, greatly improving their manual Excel tracking. See the <a href="/projects">projects page</a> for more information.
-    - title: CMPT 225
-      subtitle: Data Structures and Programming
+    - title: Data Structures and Programming
+      subtitle: CMPT 225
       bullets:
         - Learned about and implemented data structures/algorithms such as AVL trees, heaps, hash tables, and various sorting algorithms in C++.
 ---
@@ -77,7 +77,7 @@ courseCards:
         <div class="card-container">
           <% courseCards.forEach(card => { %>
             <%- include('_includes/layouts/card.ejs', { 
-              githubLink: null,
+              cardLinks: null,
               cardImageSrc: card.src,
               cardImageAlt: card.alt,
               cardTitle: card.title,
