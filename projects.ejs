@@ -6,6 +6,7 @@ projectCards:
     - title: Project Blue
       subtitle: Azur Lane game automation
       dates: September 2021 - ongoing
+      ghlink: https://github.com/Liversticks/project-blue
       bullets:
         - Created a state machine in Python to consistently track all possible game configurations.
         - Implemented transitions using the Win32 API to generate virtual key presses for the emulator.
@@ -21,6 +22,7 @@ projectCards:
     - title: BGC Coursys
       subtitle: Software Engineering course project
       dates: May 2020 - August 2020
+      ghlink: https://github.com/Liversticks/cmpt276-bgc-coursys
       bullets:
         - Acted as the team leader (delegating work and resolving conflicts) and liaison to corporate client.
         - Created a real-time training-scheduling system using Node.js, Postgres, EJS/HTML/CSS, and socket.io.
@@ -29,6 +31,7 @@ projectCards:
         - Led code reviews and Git merging; wrote automated UI tests using Selenium.
     - title: PMD Speedrun World Record Tracker
       dates: April 2021 - May 2021
+      ghlink: https://github.com/Liversticks/cloud-pmd-updater
       bullets: 
         - Prototyped in Django; deployed using Azure Functions (C#) with GitHub Actions CI/CD.
         - Consumed speedrun.com API and cached results in Cosmos DB.
@@ -37,6 +40,7 @@ projectCards:
     - title: Rote Sphere
       subtitle: SFU STEM Sprint 2021 hackathon submission
       dates: September 2021
+      ghlink: https://github.com/Liversticks/rote-sphere
       bullets:
         - Served as team leader and mentored first-time teammates with environment setup and development priorities.
         - Prototyped a dashboard that tracks neighbourhood utility usage using Django.
@@ -44,6 +48,7 @@ projectCards:
     - title: HackChan
       subtitle: StormHacks 2021 hackathon submission
       dates: February 2021
+      ghlink: https://github.com/Liversticks/HackChan
       bullets:
         - Created an anonymous message board where users can create threads and reply to other messages.
         - Used React for the frontend SPA, Node.js for the backend API in Node.js, Postgres for persistence, and Heroku for deployment.
@@ -71,7 +76,14 @@ projectCards:
     <h1><%= title %></h1>
     <div class="card-container">
       <% projectCards.forEach(card => { %>
-        <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
+        <%- include('_includes/layouts/card.ejs', { 
+          cardImageSrc: card.src,
+          cardImageAlt: card.alt,
+          githubLink: card.ghlink,
+          cardTitle: card.title,
+          cardSubtitle: card.subtitle,
+          cardDates: card.dates,
+          cardBullets: card.bullets }) %>
       <% }) %>
     </div>
 </article>
