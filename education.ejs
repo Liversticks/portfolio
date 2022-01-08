@@ -74,9 +74,11 @@ courseCards:
     <section id='coursework'>
         <h4>Coursework</h4>
         <p>While some courses are more theoretical and abstract than others, all of my courses helped me more deeply understand computing.</p>
-        <% courseCards.forEach(card => { %>
+        <div class="card-container">
+          <% courseCards.forEach(card => { %>
             <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
-        <% }) %>
+          <% }) %>
+        </div>
     </section>
     <section id='extracurriculars'>
         <h4>Extracurriculars</h4>

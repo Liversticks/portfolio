@@ -69,7 +69,9 @@ projectCards:
 ---
 <article>
     <h1><%= title %></h1>
-    <% projectCards.forEach(card => { %>
+    <div class="card-container">
+      <% projectCards.forEach(card => { %>
         <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
-    <% }) %>
+      <% }) %>
+    </div>
 </article>
