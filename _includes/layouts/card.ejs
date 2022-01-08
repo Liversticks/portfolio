@@ -1,20 +1,31 @@
 <section class="bullet-card">
     <% if (cardImageSrc && cardImageAlt) { %>
-        <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>">
+        <div class="card-media">
+            <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>">
+        </div>
     <% } %>
-    <h1><%= cardTitle %></h1>
-    <% if (cardSubtitle) { %>
-        <h2><%= cardSubtitle %></h2>
-    <% } %>
-    <% if (cardDates) { %>
-        <h3><%= cardDates %></h3>
-    <% } %>
-    <% if (githubLink) { %>
-        <h4><img src="/images/github.svg" alt="GitHub logo" class="logo"><a href="<%= githubLink %>">GitHub Repository</a></h4>
-    <% } %>
-    <ul>
-        <% cardBullets.forEach(item => { %>
-            <li><%- item %></li>
-        <% }) %>
-    </ul>
+    <div class="card-content">
+        <h1><%= cardTitle %></h1>
+        <% if (cardSubtitle) { %>
+            <h2><%= cardSubtitle %></h2>
+        <% } %>
+        <% if (cardDates) { %>
+            <h3><%= cardDates %></h3>
+        <% } %>
+        <% if (cardLinks) { %>
+            <% cardLinks.forEach(link => { %>
+                <h4>
+                    <% if (link.icon) { %>
+                        <img src="/images/<%= link.icon %>.svg" alt="<%= link.icon %> logo" class="logo">
+                    <% } %>
+                    <a href="<%= link.target %>"><%= link.description %></a>
+                </h4>
+            <% }) %>
+        <% } %>
+        <ul>
+            <% cardBullets.forEach(item => { %>
+                <li><%- item %></li>
+            <% }) %>
+        </ul>
+    </div>
 </section>
