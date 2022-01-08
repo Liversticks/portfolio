@@ -1,0 +1,75 @@
+---
+layout: main.ejs
+title: My Projects
+description: The projects Oliver Xie built (academic and personal)
+projectCards:
+    - title: Project Blue
+      subtitle: Azur Lane game automation
+      dates: September 2021 - ongoing
+      bullets:
+        - Created a state machine in Python to consistently track all possible game configurations.
+        - Implemented transitions using the Win32 API to generate virtual key presses for the emulator.
+        - Made a data pipeline to retrieve and preprocess training images from local gameplay and external videos.
+        - Trained a neural network using Keras on these images with x% accuracy, speeding up clear times by 50%.
+    - title: Bilby Compiler
+      subtitle: Compilers course project
+      dates: May 2021 - August 2021
+      bullets:
+        - Created a compiler in Java that translates a procedural language to stack machine (one-address) code.
+        - Implemented primitive types, compound types (strings, arrays, ranges), branching, loops, type promotion, and function calls.
+        - Applied test-driven development for every iteration of the language specification.
+    - title: BGC Coursys
+      subtitle: Software Engineering course project
+      dates: May 2020 - August 2020
+      bullets:
+        - Acted as the team leader (delegating work and resolving conflicts) and liaison to corporate client.
+        - Created a real-time training-scheduling system using Node.js, Postgres, EJS/HTML/CSS, and socket.io.
+        - Reduced the effort needed to track employee enrollment by 40%.
+        - Controlled project scope to ensure on-time delivery despite losing 40% of team members halfway through the project.
+        - Led code reviews and Git merging; wrote automated UI tests using Selenium.
+    - title: PMD Speedrun World Record Tracker
+      dates: April 2021 - May 2021
+      bullets: 
+        - Prototyped in Django; deployed using Azure Functions (C#) with GitHub Actions CI/CD.
+        - Consumed speedrun.com API and cached results in Cosmos DB.
+        - Completely automated manual process saving 2 hours of work every month.
+        - Easily scaled to handle category reorganizations and new games.
+    - title: Rote Sphere
+      subtitle: SFU STEM Sprint 2021 hackathon submission
+      dates: September 2021
+      bullets:
+        - Served as team leader and mentored first-time teammates with environment setup and development priorities.
+        - Prototyped a dashboard that tracks neighbourhood utility usage using Django.
+        - Finished 3rd place at the hackathon and won $200+ in prizes.
+    - title: HackChan
+      subtitle: StormHacks 2021 hackathon submission
+      dates: February 2021
+      bullets:
+        - Created an anonymous message board where users can create threads and reply to other messages.
+        - Used React for the frontend SPA, Node.js for the backend API in Node.js, Postgres for persistence, and Heroku for deployment.
+    - title: Meal Scheduler
+      dates: August 2020 - November 2020
+      bullets:
+        - Allows signing up to prepare a meal, displaying recipes, and shows holidays.
+        - Implemented REST API in Node.js, persistence in Postgres and web UI in React.
+        - Used Postman, Mocha, and Chai for automated API testing.
+        - Increased meal planning efficiency at home by distributing workload and sharing recipes.
+    - title: The Eye
+      subtitle: BC Game Jam 2020 submission
+      dates: February 2020
+      bullets:
+        - Constructed levels for a 2D platformer using Unity and C# for a 48-hour hackathon.
+        - Learned Git best practices in a nine-person team.
+    - title: Twitch IRC chat bot
+      dates: December 2019 - February 2020
+      bullets:
+        - Designed and implemented real-time text-based minigames for Twitch chat using C++.
+        - Consumed the Twitch IRC API by extending a custom Windows socket interface.
+        - Increased engagement on my channel and became an Affiliate, allowing monetization.
+---
+<article>
+    <h1><%= title %></h1>
+    <% projectCards.forEach(card => { %>
+        <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
+    <% }) %>
+</article>
