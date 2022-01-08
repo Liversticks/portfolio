@@ -1,0 +1,41 @@
+---
+layout: main.ejs
+title: My Awards and Honors
+description: Awards and recognitions Oliver Xie has received
+awardCards:
+    - title: Yale Young Global Scholars (YYGS) Alumnus
+      dates: July 2018
+      bullets:
+        - Worked on a capstone project to promote the increased adoption of renewable energy.
+        - Participated in a MUN-like political simulation on water scarcity as a climate envoy of the People's Republic of China.
+    - title: Model United Nations
+      subtitle: Awards from Vancouver-area conferences
+      bullets:
+        - "CAIMUN 2018: Outstanding Delegate (Minister of Foreign Affairs, Government of Libya 2015)"
+        - "Semiahmoo MUN 2018: Honourable Mention (Ambassador of Germany, Spanish Civil War JHCC)"
+        - "CAIMUN 2017: Best Position Paper (Minister of Defense, Government of the Russian Federation)"
+        - "Burnaby MUN 2017: Outstanding Delegate (Canada, UNCSTD)"
+    - title: ARCT in Piano Performance
+      dates: October 2017
+      bullets:
+        - Gave private supplementary lessons to students, encouraging good practice habits.
+        - Served as the piano accompanist for my high school's choir.
+        - Studied advanced theory and music history for this performance diploma.
+    - title: SHAD Fellow
+      dates: July 2017
+      bullets: 
+        - Developed a business plan, conducted risk analyses, and pitched to investors for an Arctic greenhouse project.
+        - Participated in activities that fostered innovation and entrepreneurship.
+    - title: Delta Rotary Youth Helping Hand Award
+      dates: June 2017
+      bullets:
+        - Co-led afterschool and semester-break camps for elementary age children. 
+        - Performed logistics and coordination volunteering for special events such as the Tour de Delta and Delta Triathlon.
+        - Assisted in running basketball and soccer recreation programs at the local community center. 
+---
+<article>
+    <h1><%= title %></h1>
+    <% awardCards.forEach(card => { %>
+        <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
+    <% }) %>
+</article>
