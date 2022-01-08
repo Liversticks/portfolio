@@ -1,0 +1,23 @@
+---
+layout: main.ejs
+title: My Work Experience
+description: Where Oliver Xie has worked
+cards:
+    - src: /images/ch-logo-94px.svg
+      alt: Change Healthcare corporate logo
+      title: Change Healthcare
+      subtitle: Software Development Engineer (Co-op)
+      dates: September 2020 - April 2021
+      bullets:
+        - Led an Identity Server upgrade for Change Healthcare Radiology Solutions (CHRS). I conducted an alternatives analysis for legacy ASP.NET Core 1.x web server and maintained compatibility with pre-existing components and integration. I included feedback from internal stakeholders and wrote new code using ASP.NET Core 3.1 idioms and SOLID principles. My work is gradually being deployed to all CHRS installations.
+        - Secured a image/DICOM file-upload endpoint in the C# PACS backend.
+        - Ported 30+ hotfixes over a 2-week sprint to support a national healthcare agency product upgrade.
+        - Refactored Visual C++ backend modules using static analysis; eliminated over 50 resource leaks, null pointer dereferences, and unvalidated untrusted inputs; and improved test coverage for legacy codebase.
+        - Finished second place in company-wide Pacman hackathon and contributed to the pathfinding AI for ghosts and Pacman.
+---
+<article>
+    <h1><%= title %></h1>
+    <% cards.forEach(card => { %>
+        <%- include('_includes/layouts/card.ejs', { cardImageSrc: card.src, cardImageAlt: card.alt, cardTitle: card.title, cardSubtitle: card.subtitle, cardDates: card.dates, cardBullets: card.bullets }) %>
+    <% }) %>
+</article>
