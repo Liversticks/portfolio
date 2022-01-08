@@ -6,7 +6,10 @@ projectCards:
     - title: Project Blue
       subtitle: Azur Lane game automation
       dates: September 2021 - ongoing
-      ghlink: https://github.com/Liversticks/project-blue
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/project-blue
+          description: GitHub Repository
       bullets:
         - Created a state machine in Python to consistently track all possible game configurations.
         - Implemented transitions using the Win32 API to generate virtual key presses for the emulator.
@@ -22,7 +25,10 @@ projectCards:
     - title: BGC Coursys
       subtitle: Software Engineering course project
       dates: May 2020 - August 2020
-      ghlink: https://github.com/Liversticks/cmpt276-bgc-coursys
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/cmpt276-bgc-coursys
+          description: GitHub Repository
       bullets:
         - Acted as the team leader (delegating work and resolving conflicts) and liaison to corporate client.
         - Created a real-time training-scheduling system using Node.js, Postgres, EJS/HTML/CSS, and socket.io.
@@ -31,7 +37,10 @@ projectCards:
         - Led code reviews and Git merging; wrote automated UI tests using Selenium.
     - title: PMD Speedrun World Record Tracker
       dates: April 2021 - May 2021
-      ghlink: https://github.com/Liversticks/cloud-pmd-updater
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/cloud-pmd-updater
+          description: Backend GitHub Repository
       bullets: 
         - Prototyped in Django; deployed using Azure Functions (C#) with GitHub Actions CI/CD.
         - Consumed speedrun.com API and cached results in Cosmos DB.
@@ -40,7 +49,10 @@ projectCards:
     - title: Rote Sphere
       subtitle: SFU STEM Sprint 2021 hackathon submission
       dates: September 2021
-      ghlink: https://github.com/Liversticks/rote-sphere
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/rote-sphere
+          description: GitHub Repository
       bullets:
         - Served as team leader and mentored first-time teammates with environment setup and development priorities.
         - Prototyped a dashboard that tracks neighbourhood utility usage using Django.
@@ -48,25 +60,43 @@ projectCards:
     - title: HackChan
       subtitle: StormHacks 2021 hackathon submission
       dates: February 2021
-      ghlink: https://github.com/Liversticks/HackChan
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/HackChan
+          description: GitHub Repository
       bullets:
         - Created an anonymous message board where users can create threads and reply to other messages.
         - Used React for the frontend SPA, Node.js for the backend API in Node.js, Postgres for persistence, and Heroku for deployment.
     - title: Meal Scheduler
       dates: August 2020 - November 2020
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/meal-scheduler
+          description: Backend GitHub Repository
+        - icon: github
+          target: https://github.com/Liversticks/meal-client
+          description: Frontend GitHub Repository
       bullets:
         - Allows signing up to prepare a meal, displaying recipes, and shows holidays.
-        - Implemented REST API in Node.js, persistence in Postgres and web UI in React.
+        - Implemented REST API in Node.js and Express, persistence in Postgres and web UI in React.
         - Used Postman, Mocha, and Chai for automated API testing.
         - Increased meal planning efficiency at home by distributing workload and sharing recipes.
     - title: The Eye
       subtitle: BC Game Jam 2020 submission
       dates: February 2020
+      links:
+        - icon: github
+          target: https://github.com/EarthenSky/BCGAMEJAM
+          description: GitHub Repository
       bullets:
         - Constructed levels for a 2D platformer using Unity and C# for a 48-hour hackathon.
         - Learned Git best practices in a nine-person team.
     - title: Twitch IRC chat bot
       dates: December 2019 - February 2020
+      links:
+        - icon: github
+          target: https://github.com/Liversticks/Revised-phantom-Twitch-IRC-bot
+          description: GitHub Repository
       bullets:
         - Designed and implemented real-time text-based minigames for Twitch chat using C++.
         - Consumed the Twitch IRC API by extending a custom Windows socket interface.
@@ -79,7 +109,7 @@ projectCards:
         <%- include('_includes/layouts/card.ejs', { 
           cardImageSrc: card.src,
           cardImageAlt: card.alt,
-          githubLink: card.ghlink,
+          cardLinks: card.links,
           cardTitle: card.title,
           cardSubtitle: card.subtitle,
           cardDates: card.dates,
