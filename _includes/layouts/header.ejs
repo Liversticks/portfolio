@@ -1,0 +1,16 @@
+<header>
+    <div>
+        <h1 id="siteTitle"><a href="/"><%= siteTitle %></a></h1>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <% menuLinks.forEach(function(link) { %>
+                    <li class="navItem">
+                        <a href="<%= link.link %>" class="navLink"><%= link.name %></a>
+                    </li>
+                <% }) %>
+            </ul>
+        </nav>
+    </div>
+</header>
