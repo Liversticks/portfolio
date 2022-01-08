@@ -18,6 +18,12 @@ main {
     }
 }
 
+.logo {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
 /* Bullet Card */
 
 .bullet-card {
@@ -43,6 +49,14 @@ main {
     font-size: 1rem;
     color: #5D7ED6;
     margin: 0.25rem 0;
+}
+
+.bullet-card h4 {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+    display: flex;
+    justify-content: left;
+    align-content: center;
 }
 
 /* Site Header */
