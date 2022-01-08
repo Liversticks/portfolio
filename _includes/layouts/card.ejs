@@ -1,11 +1,16 @@
 <section class="bullet-card">
-    <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>">
+    <% if (cardImageSrc && cardImageAlt) { %>
+        <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>">
+    <% } %>
     <h1><%= cardTitle %></h1>
     <% if (cardSubtitle) { %>
         <h2><%= cardSubtitle %></h2>
     <% } %>
     <% if (cardDates) { %>
         <h3><%= cardDates %></h3>
+    <% } %>
+    <% if (githubLink) { %>
+        <h4><img src="/images/github.svg" alt="GitHub logo" class="logo"><a href="<%= githubLink %>">GitHub Repository</a></h4>
     <% } %>
     <ul>
         <% cardBullets.forEach(item => { %>
