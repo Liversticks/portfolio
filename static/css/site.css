@@ -10,7 +10,20 @@ main {
     margin: 0.5rem;
 }
 
-.heading-box {
+/*
+.home-main {
+    display: flex;
+}
+*/
+
+.pdf-viewer {
+    min-width: 50vw;
+    min-height: 80vh;
+    width: 100%;
+    height: auto;
+}
+
+.education-header {
     background-color: #C0BEC2;
     border: 1.5px solid black;
     padding: 0.5rem;
@@ -34,7 +47,7 @@ main {
         align-self: center;
     }
 
-    .education-info {
+    .heading-contents {
         margin-left: 1rem;
     }
 }
