@@ -10,7 +10,36 @@ main {
     margin: 0.5rem;
 }
 
-@media screen and (min-width: 480px) {
+.heading-box {
+    background-color: #C0BEC2;
+    border: 1.5px solid black;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 560px) {
+    .heading-box img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .heading-box {
+        display: flex;
+    }
+
+    .heading-box img {
+        max-width: 50%;
+        object-fit: contain;
+        object-position: bottom;
+        align-self: center;
+    }
+
+    .education-info {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 480px) {    
     .card-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
@@ -44,7 +73,7 @@ main {
 /* Bullet Card */
 
 .bullet-card {
-    border: 1px solid black;
+    border: 1.5px solid black;
     padding: 0.5rem;
     margin: 0.5rem 0;
     background-color: #F3F3F3;
