@@ -3,7 +3,7 @@ layout: main.ejs
 title: My Work Experience
 description: Where Oliver Xie has worked
 cards:
-    - src: /images/ch-logo-94px.svg
+    - src: /static/images/ch-logo-94px.svg
       alt: Change Healthcare corporate logo
       title: Software Development Engineer (Co-op)
       subtitle: Change Healthcare
@@ -12,7 +12,7 @@ cards:
         - Conducted an alternatives analysis for an Identity Server (C# ASP.NET Core) version upgrade.
         - Implemented upgraded version using SOLID principles while minimizing impact to existing configuration and system integration.
         - Improved security for a key component of all Change Healthcare Radiology Solutions deployed at hospitals. 
-        - Secured a image/DICOM file-upload API endpoint in the C# PACS backend.
+        - Secured an image/DICOM file-upload API endpoint in the C# PACS backend.
         - Ported 30+ hotfixes over a 2-week sprint to support a national healthcare agency product upgrade.
         - Refactored Visual C++ backend modules using static analysis and eliminated over 50 resource leaks.
         - Updated existing tests and wrote new ones for legacy codebase.
@@ -32,4 +32,14 @@ cards:
                 cardBullets: card.bullets }) %>
         <% }) %>
     </div>
+    <h2>My Résumé (as of <%= new Date().toLocaleDateString('en-us', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    }) %>)</h2>
+    <object class="pdf-viewer" data="/static/oxie_resume.pdf" type="application/pdf">
+        <embed class="pdf-viewer" src="/static/oxie_resume.pdf" type="application/pdf">
+            <p>Download my résumé as PDF <a href="/static/oxie_resume.pdf">here</a>.</p>
+        </embed>
+    </object>
 </article>
