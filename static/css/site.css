@@ -149,6 +149,10 @@ p, li, footer {
     align-content: center;
 }
 
+.bullet-card li {
+    margin: 0.2rem auto;
+}
+
 /*
 .bullet-card h4 a:link {
     text-decoration: none;
