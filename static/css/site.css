@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'libre_caslon_textregular';
+    src: url('/static/fonts/librecaslontext-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/librecaslontext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('/static/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     background-color: #F3F3F3;
 }
@@ -8,6 +24,14 @@ body {
 
 main {
     margin: 0.5rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'source_sans_proregular';
+}
+
+p, li, footer {
+    font-family: 'libre_caslon_textregular';
 }
 
 /*
@@ -70,6 +94,12 @@ main {
 
     .card-media img {
         width: 5rem;
+    }
+
+    .two-column {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1rem;
     }
 }
 
