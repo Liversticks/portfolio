@@ -32,13 +32,14 @@ h1, h2, h3, h4 {
 
 p, li, footer {
     font-family: 'libre_caslon_textregular';
+    line-height: 1.25;
 }
 
-/*
-.home-main {
-    display: flex;
+em {
+    font-style: normal;
+    font-weight: bolder;
+    color: #07959E;
 }
-*/
 
 .pdf-viewer {
     min-width: 50vw;
