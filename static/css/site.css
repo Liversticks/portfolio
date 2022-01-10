@@ -77,6 +77,16 @@ em {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .card-media img {
+        max-width: 100%;
+    }
+
+    .card-media {
+        margin: 0.5rem;
+    }
+}
+
 @media screen and (min-width: 480px) {    
     .card-container {
         display: grid;
@@ -91,10 +101,11 @@ em {
 
     .card-media {
         align-self: center;
+        margin: 0.5rem 1rem 0.5rem 0.5rem;
     }
 
     .card-media img {
-        width: 5rem;
+        width: 8rem;
     }
 
     .two-column {
@@ -104,9 +115,7 @@ em {
     }
 }
 
-.card-media {
-    margin: 0.5rem;
-}
+
 
 .logo {
     width: 1rem;
