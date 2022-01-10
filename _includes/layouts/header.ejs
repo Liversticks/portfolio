@@ -2,8 +2,10 @@
     <div>
         <h1 id="siteTitle"><a href="/"><%= siteTitle %></a></h1>
     </div>
-    <div>
-        <nav>
+    <div id="toggle">
+        <nav role="navigation">
+            <input type="checkbox"/>
+            <img class="menu-icon" src="/static/images/bars.svg" alt="Hamburger menu icon" />
             <ul>
                 <% menuLinks.forEach(function(link) { %>
                     <li class="nav-item">
