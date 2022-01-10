@@ -4,6 +4,7 @@ title: My Work Experience
 description: Where Oliver Xie has worked
 cards:
     - src: /static/images/ch-logo-94px.svg
+      imgLink: https://www.changehealthcare.com/
       alt: Change Healthcare corporate logo
       title: Software Development Engineer (Co-op)
       subtitle: Change Healthcare
@@ -25,6 +26,7 @@ cards:
             <%- include('_includes/layouts/card.ejs', { 
                 cardImageSrc: card.src,
                 cardImageAlt: card.alt,
+                cardImageLink: card.imgLink,
                 cardLinks: null,
                 cardTitle: card.title,
                 cardSubtitle: card.subtitle,

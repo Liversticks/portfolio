@@ -107,6 +107,7 @@ projectCards:
     <div class="card-container">
       <% projectCards.forEach(card => { %>
         <%- include('_includes/layouts/card.ejs', { 
+          cardImageLink: null,
           cardImageSrc: card.src,
           cardImageAlt: card.alt,
           cardLinks: card.links,

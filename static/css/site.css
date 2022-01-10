@@ -66,7 +66,7 @@ em {
     }
 
     .heading-box img {
-        max-width: 50%;
+        max-width: 100%;
         object-fit: contain;
         object-position: bottom;
         align-self: center;
