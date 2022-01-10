@@ -66,7 +66,7 @@ em {
     }
 
     .heading-box img {
-        max-width: 50%;
+        max-width: 100%;
         object-fit: contain;
         object-position: bottom;
         align-self: center;
@@ -74,6 +74,16 @@ em {
 
     .heading-contents {
         margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card-media img {
+        max-width: 100%;
+    }
+
+    .card-media {
+        margin: 0.5rem;
     }
 }
 
@@ -91,10 +101,11 @@ em {
 
     .card-media {
         align-self: center;
+        margin: 0.5rem 1rem 0.5rem 0.5rem;
     }
 
     .card-media img {
-        width: 5rem;
+        width: 8rem;
     }
 
     .two-column {
@@ -104,9 +115,7 @@ em {
     }
 }
 
-.card-media {
-    margin: 0.5rem;
-}
+
 
 .logo {
     width: 1rem;

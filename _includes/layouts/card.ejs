@@ -1,7 +1,13 @@
 <section class="bullet-card">
     <% if (cardImageSrc && cardImageAlt) { %>
         <div class="card-media">
+            <% if (cardImageLink) { %>
+                <a href="<%= cardImageLink %>" rel="noreferrer" target="_blank">
+            <% } %>
             <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>">
+            <% if (cardImageLink) { %>
+                </a>
+            <% } %>
         </div>
     <% } %>
     <div class="card-content">
@@ -18,7 +24,7 @@
                     <% if (link.icon) { %>
                         <img src="/static/images/<%= link.icon %>.svg" alt="<%= link.icon %> logo" class="logo">
                     <% } %>
-                    <a href="<%= link.target %>"><%= link.description %></a>
+                    <a href="<%= link.target %>" rel="noreferrer" target="_blank"><%= link.description %></a>
                 </h4>
             <% }) %>
         <% } %>
