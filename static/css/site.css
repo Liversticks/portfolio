@@ -154,17 +154,94 @@ em {
     margin: 0.2rem auto;
 }
 
-/*
-.bullet-card h4 a:link {
-    text-decoration: none;
-}
-*/
-
 /* Site Header */
 
+@media screen and (max-width: 800px) {
+    #toggle {
+        z-index: 1;
+    }
+    
+    #toggle input {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 32px;
+        top: -10px;
+        right: -5px;
+        cursor: pointer;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+
+    .menu-icon {
+        position: absolute;
+        width: 40px;
+        height: 32px;
+        top: 0px;
+        right: 0px;
+        z-index: 1;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 100%;
+        /*
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        */
+
+        background: #2F2E33;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+  
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+  
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #toggle input:checked ~ ul {
+        transform: none;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-item {
+        padding: 0;
+        float: left;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    #toggle input {
+        display: none;
+    }
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+}
+
+#toggle {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#toggle input {
+    opacity: 0;
+}
+
 header {
-    display: flex;
-    align-items: center;
     background-color: #2F2E33;
     position: -webkit-sticky;
     position: sticky;
