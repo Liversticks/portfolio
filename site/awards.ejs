@@ -47,7 +47,7 @@ awardCards:
 <article class='stack'>
     <h1><%= title %></h1>
     <% awardCards.forEach(card => { %>
-        <%- include('_includes/layouts/card.ejs', { 
+        <%- include('../_includes/layouts/card.ejs', { 
           padImages: true,
           cardLinks: null,
           cardImageLink: card.imgLink,

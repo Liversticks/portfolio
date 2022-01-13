@@ -23,7 +23,7 @@ cards:
     <h1 class='heading'><%= title %></h1>
     <div class="stack">
         <% cards.forEach(card => { %>
-            <%- include('_includes/layouts/card.ejs', { 
+            <%- include('../_includes/layouts/card.ejs', { 
                 padImages: true,
                 cardImageSrc: card.src,
                 cardImageAlt: card.alt,

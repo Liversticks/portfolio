@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "libre_caslon_textregular";
+  src: url("/static/fonts/librecaslontext-regular-webfont.woff2") format("woff2"), url("/static/fonts/librecaslontext-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url("/static/fonts/sourcesanspro-regular-webfont.woff2") format("woff2"), url("/static/fonts/sourcesanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Adapted from Refactoring UI */
+/* Every Layout: Stack pattern */
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 32px auto;
+}
+
+.stack > * {
+  margin: 0 auto;
+}
+
+.stack > * + * {
+  margin-top: 24px;
+}
+
+/* Every Layout: Center pattern */
+.center {
+  box-sizing: content-box;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Every Layout: Sidebar pattern */
+.flex-wrap, .sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 50%;
+}
+
+main {
+  margin: 8px;
+}
+
+html {
+  background-color: #f7f3f3;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: "source_sans_proregular";
+}
+
+p, li, footer {
+  font-family: "libre_caslon_textregular";
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 64px;
+  color: #18171c;
+}
+
+h2 {
+  font-size: 48px;
+  margin: 48px auto;
+}
+
+h3 {
+  font-size: 48px;
+  color: #736e77;
+}
+
+h4 {
+  font-size: 48px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.text-container {
+  max-width: 75ch;
+  min-width: 35ch;
+}
+
+.text-container * {
+  line-height: 1.5;
+}
+
+.text-container > * + * {
+  margin-top: var(--space, 12px);
+}
+
+.stack.card-text {
+  margin-top: 0;
+}
+
+section.card {
+  margin-top: 40px;
+}
+
+.card-heading {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  align-self: flex-start;
+}
+
+.card h1 {
+  color: #0a266b;
+  font-size: 32px;
+}
+
+.card h2 {
+  color: #4f69b0;
+  font-size: 24px;
+}
+
+.card h3 {
+  color: #657dbd;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.card h4 {
+  color: #9baee4;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+}
+
+.card-image {
+  width: 192px;
+}
+
+.left-align {
+  margin-left: 8px;
+}
+
+div.left-align {
+  margin-top: 4px;
+}
+
+div.left-align > * + * {
+  margin-top: 4px;
+}
+
+ul.external-links {
+  list-style-type: none;
+  margin-top: 8px;
+  padding: 0;
+}
+
+em {
+  font-style: normal;
+  font-weight: bolder;
+  color: #07939d;
+}
+
+.pdf-viewer {
+  min-width: 50vw;
+  min-height: 80vh;
+  width: 100%;
+  height: auto;
+}
+
+p a, li a {
+  color: #7b92d1;
+}
+
+:is(p, li) a:hover, a :is(h4, h5, h6):hover {
+  text-decoration: underline solid 2px #0a266b;
+}
+
+img.banner {
+  max-width: 90vw;
+}
+
+.degree-heading > .degree-title {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.degree-heading > .degree-dates {
+  font-size: 24px;
+  color: #645d69;
+}
+
+#skills {
+  gap: 32px;
+}
+
+.logo {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+}
+
+.contact-method {
+  list-style-type: none;
+}
+
+.contact-method a {
+  text-decoration: none;
+}
+
+/* Site Header */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #323036;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+#siteTitle {
+  margin: 0;
+}
+
+#siteTitle a {
+  text-decoration: none;
+  color: #7b92d1;
+  padding-left: 1rem;
+}
+
+nav ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav-item {
+  padding: 0;
+  float: left;
+}
+
+.nav-item:hover {
+  background-color: #18171c;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  color: #f1eaeb;
+}
+
+/* Site Footer */
+footer {
+  margin: 32px 0;
+  border-top: 1px solid #18171c;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 8px;
+}
+
+/*# sourceMappingURL=site.css.map */
