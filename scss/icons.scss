@@ -1,0 +1,33 @@
+@import "font-awesome/fontawesome.scss";
+@import "font-awesome/solid.scss";
+@import "font-awesome/brands.scss";
+
+/* may not be necessary */
+$fa-font-path: "../fonts";
+
+.github {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-github);
+    }
+}
+
+.linkedin {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-linkedin);
+    }
+}
+
+.envelope {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+        content: fa-content($fa-var-envelope);
+    }
+}
