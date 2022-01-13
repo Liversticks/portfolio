@@ -19,11 +19,12 @@ cards:
         - Updated existing tests and wrote new ones for legacy codebase.
         - Finished second place in company-wide Pacman hackathon and contributed to the pathfinding AI for ghosts and Pacman.
 ---
-<article>
-    <h1><%= title %></h1>
-    <div class='card-container'>
+<article class='stack'>
+    <h1 class='title'><%= title %></h1>
+    <div class="stack">
         <% cards.forEach(card => { %>
             <%- include('_includes/layouts/card.ejs', { 
+                padImages: true,
                 cardImageSrc: card.src,
                 cardImageAlt: card.alt,
                 cardImageLink: card.imgLink,
