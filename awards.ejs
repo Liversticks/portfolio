@@ -44,11 +44,11 @@ awardCards:
         - Performed logistics and coordination volunteering for special events such as the Tour de Delta and Delta Triathlon.
         - Assisted in running basketball and soccer recreation programs at the local community center. 
 ---
-<article>
+<article class='stack'>
     <h1><%= title %></h1>
-    <div class="card-container">
-      <% awardCards.forEach(card => { %>
+    <% awardCards.forEach(card => { %>
         <%- include('_includes/layouts/card.ejs', { 
+          padImages: true,
           cardLinks: null,
           cardImageLink: card.imgLink,
           cardImageSrc: card.src,
@@ -58,6 +58,5 @@ awardCards:
           cardDates: card.dates,
           cardBullets: card.bullets
          }) %>
-      <% }) %>
-    </div>
+    <% }) %>
 </article>
