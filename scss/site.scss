@@ -136,7 +136,7 @@ h4 {
     min-width: 35ch;
 }
 
-.text-container > * {
+.text-container * {
     line-height: 1.5;
 }
 
@@ -251,6 +251,10 @@ img.banner {
     width: 1rem;
     height: 1rem;
     margin-right: 0.25rem;
+}
+
+ul.no-bullets {
+    list-style-type: none;
 }
 
 .contact-method {
