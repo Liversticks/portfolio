@@ -105,7 +105,7 @@ projectCards:
 <article class='stack'>
     <h1><%= title %></h1>
       <% projectCards.forEach(card => { %>
-        <%- include('../_includes/layouts/card.ejs', { 
+        <%- include('_includes/layouts/card.ejs', { 
           padImages: false,
           cardImageLink: null,
           cardImageSrc: card.src,
