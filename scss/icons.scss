@@ -5,7 +5,7 @@
 /* may not be necessary */
 $fa-font-path: "../fonts";
 
-.github {
+.icon-github {
     @extend %fa-icon;
     @extend .fab;
 
@@ -14,7 +14,7 @@ $fa-font-path: "../fonts";
     }
 }
 
-.linkedin {
+.icon-linkedin {
     @extend %fa-icon;
     @extend .fab;
 
@@ -23,11 +23,119 @@ $fa-font-path: "../fonts";
     }
 }
 
-.envelope {
+.icon-envelope {
     @extend %fa-icon;
     @extend .fas;
 
     &:before {
         content: fa-content($fa-var-envelope);
+    }
+}
+
+.icon-database {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+        content: fa-content($fa-var-database);
+    }
+}
+
+.icon-python {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-python);
+    }
+}
+
+.icon-js {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-js);
+    }
+}
+
+.icon-node-js {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-node-js);
+    }
+}
+
+.icon-react {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-react);
+    }
+}
+
+.icon-html5 {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-html5);
+    }
+}
+
+.icon-css3 {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-css3-alt);
+    }
+}
+
+.icon-java {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-java);
+    }
+}
+
+.icon-docker {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-docker);
+    }
+}
+
+.icon-git {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-git-alt);
+    }
+}
+
+.icon-windows {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-windows);
+    }
+}
+
+.icon-ubuntu {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-ubuntu);
     }
 }
