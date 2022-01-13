@@ -21,18 +21,20 @@
             <h3 class='card-heading'><%= cardDates %></h3>
         <% } %>
         <% if (cardLinks) { %>
-            <div class='stack left-align'>
+            <ul class='left-align external-links'>
             <% cardLinks.forEach(link => { %>
-                <a href="<%= link.target %>" rel="noreferrer" target="_blank">
-                    <h4>
-                        <% if (link.icon) { %>
-                            <img src="/static/images/fa-icons/<%= link.icon %>.svg" alt="<%= link.icon %> logo" class="logo">
-                        <% } %>
-                    <%= link.description %>
-                    </h4>
-                </a>
+                <li>
+                    <a href="<%= link.target %>" rel="noreferrer" target="_blank">
+                        <h4>
+                            <% if (link.icon) { %>
+                                <i class="<%= link.icon %>"></i>
+                            <% } %>
+                        <%= link.description %>
+                        </h4>
+                    </a>
+                </li>
             <% }) %>
-            </div>
+            </ul>
         <% } %>
         <ul class='text-container'>
             <% cardBullets.forEach(item => { %>
