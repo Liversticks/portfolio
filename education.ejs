@@ -59,31 +59,35 @@ courseCards:
       bullets:
         - Learned about and implemented data structures/algorithms such as AVL trees, heaps, hash tables, and various sorting algorithms in C++.
 ---
-<article>
+<article class='stack'>
     <h1><%= title %></h1>
-    <section id="SFU">
-      <div class="heading-box education-header">
-        <a href="https://www.sfu.ca" rel="noreferrer" target="_blank">
-           <img src="/static/images/SFU.png" alt="Simon Fraser University logo" />
-        </a>
-        <div class="heading-contents">
-          <h2>Bachelor of Science in Computing Science</h2>
-          <h3>September 2019 - August 2023</h3>
+    <section id="SFU" class='stack'>
+      <div class="sidebar">
+        <div class="degree-institution">
+          <a href="https://www.sfu.ca" rel="noreferrer" target="_blank">
+            <img src="/static/images/SFU.png" alt="Simon Fraser University logo" class='banner'/>
+         </a>
+        </div>
+        <div class='degree-heading text-container'>
+          <h2 class='degree-title'>Bachelor of Science in Computing Science</h2>
+          <h3 class='degree-dates'>September 2019 - August 2023</h3>
         </div>
       </div>
-      <section id='academics'>
+      <section id='academics' class='text-container'>
         <h4>Academic Performance</h4>
         <p>I currently have a 3.8 GPA and received the Dean's Honour Roll three times.</p>
         <p>I am a recipient of the Undergraduate Scholars Entrance Scholarship (USES), a <em>full-ride scholarship </em>
             that recognizes students of high academic achievement who are also involved in their communities.
         </p>
       </section>
-      <section id='coursework'>
-        <h4>Coursework</h4>
-        <p>While some courses are more theoretical and abstract than others, all of my courses helped me more deeply understand computing.</p>
-        <div class="card-container">
-          <% courseCards.forEach(card => { %>
+      <section class='stack' id='coursework'>
+        <div class="text-container">
+          <h4>Coursework</h4>
+          <p>While some courses are more theoretical and abstract than others, all of my courses helped me more deeply understand computing.</p>
+        </div>
+        <% courseCards.forEach(card => { %>
             <%- include('_includes/layouts/card.ejs', { 
+              padImages: false,
               cardLinks: null,
               cardImageLink: null,
               cardImageSrc: card.src,
@@ -92,19 +96,18 @@ courseCards:
               cardSubtitle: card.subtitle,
               cardDates: card.dates,
               cardBullets: card.bullets }) %>
-          <% }) %>
-        </div>
+        <% }) %>
     </section>
-    <section id='extracurriculars'>
+    <section id='extracurriculars' class='text-container'>
         <h4>Extracurriculars</h4>
-        <p>I served as the First-Year Representative for the SFU Computing Science Student Society (CSSS). As part of this eight-month role,
+        <p>I served as the <em>First-Year Representative</em> for the SFU Computing Science Student Society (CSSS). As part of this eight-month role,
             I planned two student social events; assisted in the running of a hackathon and biweekly board games nights; and managed access
             to the the exam bank.
         </p>
-        <p>As a CS Peer Tutor, I helped first and second-year students with their coursework while also fostering independent inquiry and analysis skills.
+        <p>As a <em>CS Peer Tutor</em>, I helped first and second-year students with their coursework while also fostering independent inquiry and analysis skills.
             My ability to read and reason with others' code improved tremendously because I was doing that all the time. 
         </p>
-        <p>I introduced new students to SFU as a HIVE Leader (virtual orientation leader) and Wayfinding Champion (tour guide). I always answered any inquiry future students had about academics,
+        <p>I introduced new students to SFU as a <em>HIVE Leader</em> (virtual orientation leader) and <em>Wayfinding Champion</em> (tour guide). I always answered any inquiry future students had about academics,
             locations, and social life at university and organized Q-and-A sessions/games for them.
         </p>
         <p>Continuing my public speaking experience from high school, I joined the Burnaby Mountain Toastmasters club where I delievered prepared/impromptu speeches
