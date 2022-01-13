@@ -102,11 +102,11 @@ projectCards:
         - Consumed the Twitch IRC API by extending a custom Windows socket interface.
         - Increased engagement on my channel and became an Affiliate, allowing monetization.
 ---
-<article>
+<article class='stack'>
     <h1><%= title %></h1>
-    <div class="card-container">
       <% projectCards.forEach(card => { %>
         <%- include('_includes/layouts/card.ejs', { 
+          padImages: false,
           cardImageLink: null,
           cardImageSrc: card.src,
           cardImageAlt: card.alt,
@@ -116,5 +116,4 @@ projectCards:
           cardDates: card.dates,
           cardBullets: card.bullets }) %>
       <% }) %>
-    </div>
 </article>
