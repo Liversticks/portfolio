@@ -1,34 +1,40 @@
-<section class="bullet-card">
+<section class="center card sidebar">
     <% if (cardImageSrc && cardImageAlt) { %>
-        <div class="card-media">
-            <% if (cardImageLink) { %>
-                <a href="<%= cardImageLink %>" rel="noreferrer" target="_blank">
-            <% } %>
-            <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>">
-            <% if (cardImageLink) { %>
-                </a>
-            <% } %>
+        <div>
+        <% if (cardImageLink) { %>
+            <a href="<%= cardImageLink %>" rel="noreferrer" target="_blank">
+        <% } %>
+        <img src="<%- cardImageSrc %>" alt="<%= cardImageAlt %>" class='card-image'>
+        <% if (cardImageLink) { %>
+            </a>
+        <% } %>
         </div>
+    <% } else if (padImages) { %>
+        <div class='card-image'></div>
     <% } %>
-    <div class="card-content">
-        <h1><%= cardTitle %></h1>
+    <div class="stack card-text">
+        <h1 class='card-heading'><%= cardTitle %></h1>
         <% if (cardSubtitle) { %>
-            <h2><%= cardSubtitle %></h2>
+            <h2 class='card-heading'><%= cardSubtitle %></h2>
         <% } %>
         <% if (cardDates) { %>
-            <h3><%= cardDates %></h3>
+            <h3 class='card-heading'><%= cardDates %></h3>
         <% } %>
         <% if (cardLinks) { %>
+            <div class='stack left-align'>
             <% cardLinks.forEach(link => { %>
-                <h4>
-                    <% if (link.icon) { %>
-                        <img src="/static/images/fa-icons/<%= link.icon %>.svg" alt="<%= link.icon %> logo" class="logo">
-                    <% } %>
-                    <a href="<%= link.target %>" rel="noreferrer" target="_blank"><%= link.description %></a>
-                </h4>
+                <a href="<%= link.target %>" rel="noreferrer" target="_blank">
+                    <h4>
+                        <% if (link.icon) { %>
+                            <img src="/static/images/fa-icons/<%= link.icon %>.svg" alt="<%= link.icon %> logo" class="logo">
+                        <% } %>
+                    <%= link.description %>
+                    </h4>
+                </a>
             <% }) %>
+            </div>
         <% } %>
-        <ul>
+        <ul class='text-container'>
             <% cardBullets.forEach(item => { %>
                 <li><%- item %></li>
             <% }) %>
