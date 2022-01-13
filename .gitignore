@@ -3,4 +3,5 @@ _site/
 
 # TODO: do something about normalize.css
 static/css/
+!static/css/normalize.css
 *.map
