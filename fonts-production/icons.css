@@ -68,11 +68,11 @@
   content: "\e90c";
   color: #0077b5;
 }
-.icon-microsoft:before {
+.icon-windows:before {
   content: "\e90d";
   color: #666;
 }
-.icon-microsoftazure:before {
+.icon-azure:before {
   content: "\e90e";
   color: #0089d6;
 }
@@ -80,11 +80,11 @@
   content: "\e901";
   color: #269539;
 }
-.icon-node-dot-js:before {
+.icon-node-js:before {
   content: "\e90f";
   color: #393;
 }
-.icon-postgresql:before {
+.icon-postgres:before {
   content: "\e910";
   color: #336791;
 }
