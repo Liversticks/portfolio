@@ -20,7 +20,7 @@ cards:
         - Finished second place in company-wide Pacman hackathon and contributed to the pathfinding AI for ghosts and Pacman.
 ---
 <article class='stack'>
-    <h1 class='title'><%= title %></h1>
+    <h1 class='heading'><%= title %></h1>
     <div class="stack">
         <% cards.forEach(card => { %>
             <%- include('_includes/layouts/card.ejs', { 
@@ -35,69 +35,74 @@ cards:
                 cardBullets: card.bullets }) %>
         <% }) %>
     </div>
-    <h2>Professional Skills</h2>
-    <section class="two-column">
-        <div class="skill-list">
-            <h3>Programming Languages</h3>
-            <ul>
-                <li>C#
-                    <ul>
-                        <li>.NET</li>
-                        <li>ASP.NET Core</li>
-                    </ul>
-                </li>
-                <li>Python
-                    <ul>
-                        <li>Numpy</li>
-                        <li>Pandas</li>
-                    </ul>
-                </li>
-                <li>JavaScript
-                    <ul>
-                        <li>Node.js</li>
-                        <li>React</li>
-                    </ul>
-                </li>
-                <li>HTML/CSS</li>
-                <li>SQL</li>
-                <li>C</li>
-                <li>Java</li>
-                <li>C++</li>
-            </ul>
-        </div>
-        <div class="skill-list">
-            <h3>Tools and Utilities</h3>
-            <ul>
-                <li>Relational Databases
-                    <ul>
-                        <li>PostgreSQL</li>
-                        <li>MS SQL Server</li>
-                        <li>SQLite</li>
-                    </ul>
-                </li>
-                <li>NoSQL Databases
-                    <ul>
-                        <li>Couchbase</li>
-                        <li>Azure Cosmos DB</li>
-                    </ul>
-                </li>
-                <li>Docker</li>
-                <li>Apache Spark</li>
-                <li>Git</li>
-                <li>Microsoft Azure</li>
-                <li>Windows and Ubuntu</li>
+    <section class='stack'>
+        <h2 class='heading'>Professional Skills</h2>
+        <section id='skills' class='sidebar'>
+            <div class="text-container">
+                <h3>Languages</h3>
+                <ul>
+                    <li>C#
+                        <ul>
+                            <li>.NET</li>
+                            <li>ASP.NET Core</li>
+                        </ul>
+                    </li>
+                    <li>Python
+                        <ul>
+                            <li>Numpy</li>
+                            <li>Pandas</li>
+                        </ul>
+                    </li>
+                    <li>JavaScript
+                        <ul>
+                            <li>Node.js</li>
+                            <li>React</li>
+                        </ul>
+                    </li>
+                    <li>HTML/CSS</li>
+                    <li>SQL</li>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="text-container">
+                <h3>Tools/Utilities</h3>
+                <ul>
+                    <li>Relational Databases
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>MS SQL Server</li>
+                            <li>SQLite</li>
+                        </ul>
+                    </li>
+                    <li>NoSQL Databases
+                        <ul>
+                            <li>Couchbase</li>
+                            <li>Azure Cosmos DB</li>
+                        </ul>
+                    </li>
+                    <li>Docker</li>
+                    <li>Nginx</li>
+                    <li>Apache Spark</li>
+                    <li>Git</li>
+                    <li>Microsoft Azure</li>
+                    <li>Windows and Ubuntu</li>
 
-            </ul>
-        </div>
+                </ul>
+            </div>
+        </section>
     </section>
-    <h2>My Résumé (as of <%= new Date().toLocaleDateString('en-us', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    }) %>)</h2>
-    <object class="pdf-viewer" data="/static/oxie_resume.pdf" type="application/pdf">
-        <embed class="pdf-viewer" src="/static/oxie_resume.pdf" type="application/pdf">
-            <p>Download my résumé as PDF <a href="/static/oxie_resume.pdf">here</a>.</p>
-        </embed>
-    </object>
+    <section id="resume">
+        <h2 class='heading'>My Résumé (as of <%= new Date().toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }) %>)</h2>
+        <object class="pdf-viewer" data="/static/oxie_resume.pdf" type="application/pdf">
+            <embed class="pdf-viewer" src="/static/oxie_resume.pdf" type="application/pdf">
+                <p>Download my résumé as PDF <a href="/static/oxie_resume.pdf">here</a>.</p>
+            </embed>
+        </object>
+    </section>
 </article>
