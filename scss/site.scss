@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'libre_caslon_textregular';
+    src: url('/static/fonts/librecaslontext-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/librecaslontext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('/static/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$body-text: 'libre_caslon_textregular';
+$heading-text: 'source_sans_proregular';
+
+/* Adapted from Refactoring UI */
+$normal-size: 16px;
+
+$left-align: $normal-size * 0.5;
+
+$grey-1: hsl(252, 10%, 10%); 
+$grey-2: hsl(263, 6%, 20%);
+$grey-3: hsl(273, 6%, 39%);
+$grey-4: hsl(273, 4%, 45%);
+$grey-5: hsl(300, 2%, 56%);
+$grey-6: hsl(300, 2%, 63%);
+$grey-7: hsl(300, 4%, 74%);
+$grey-8: hsl(276, 5%, 82%);
+$grey-9: hsl(348, 20%, 93%);
+$grey-10: hsl(355, 20%, 96%);
+
+$primary-1: hsl(223, 83%, 23%);
+$primary-2: hsl(223, 67%, 29%);
+$primary-3: hsl(223, 53%, 36%);
+$primary-4: hsl(223, 45%, 42%);
+$primary-5: hsl(224, 38%, 50%);
+$primary-6: hsl(224, 40%, 57%);
+$primary-7: hsl(224, 48%, 65%);
+$primary-8: hsl(224, 57%, 75%);
+$primary-9: hsl(224, 73%, 85%);
+
+$accent-1: hsl(184, 92%, 32%);
+
+/* Every Layout: Stack pattern */
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: $normal-size * 2 auto;
+}
+
+.stack > * {
+    margin: 0 auto;
+}
+
+.stack > * + * {
+    margin-top: 1.5 * $normal-size;
+}
+
+/* Every Layout: Center pattern */
+.center {
+    box-sizing: content-box;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Every Layout: Sidebar pattern */
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $normal-size;
+}
+
+.sidebar > :first-child {
+    flex-grow: 1;
+}
+
+.sidebar > :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 50%;
+}
+
+main {
+    margin: $normal-size * 0.5;
+}
+
+html {
+    background-color: $grey-10;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: $heading-text;
+}
+
+p, li, footer {
+    font-family: $body-text;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: $normal-size * 4;
+    color: $grey-1;
+}
+
+h2 {
+    font-size: $normal-size * 3;
+}
+
+h3 {
+    font-size: $normal-size * 3;
+}
+
+h4 {
+    font-size: $normal-size * 3;
+    margin-top: $normal-size * 2;
+    margin-bottom: $normal-size * 1.5;
+}
+
+.text-container {
+    max-width: 75ch;
+    min-width: 35ch;
+}
+
+.text-container > * {
+    line-height: 1.5;
+}
+
+.text-container > * + * {
+    margin-top: var(--space, $normal-size * 0.75);
+}
+
+.stack.card-text {
+    margin-top: 0;
+}
+
+section.card {
+    margin-top: $normal-size * 2.5;
+}
+
+.card-heading {
+    margin-top: $normal-size * 0.25;
+    margin-bottom: $normal-size * 0.25;
+    margin-left: $left-align;
+    align-self: flex-start;
+}
+
+.card h1 {
+    color: $primary-1;
+    font-size: $normal-size * 2;
+}
+
+.card h2 {
+    color: $primary-5;
+    font-size: $normal-size * 1.5;
+}
+
+.card h3 {
+    color: $primary-6;
+    font-weight: normal;
+    font-size: $normal-size * 1.5;
+}
+
+.card h4 {
+    color: $primary-8;
+    font-weight: normal;
+    font-size: $normal-size * 1.5;
+    margin: 0;
+}
+
+.card-image {
+    width: 12 * $normal-size;
+}
+
+.left-align {
+    margin-left: $left-align;
+}
+
+div.left-align {
+    margin-top: $normal-size * 0.25;
+}
+
+div.left-align > * + * {
+    margin-top: $normal-size * 0.25;
+}
+
+em {
+    font-style: normal;
+    font-weight: bolder;
+    color: $accent-1;
+}
+
+.pdf-viewer {
+    min-width: 50vw;
+    min-height: 80vh;
+    width: 100%;
+    height: auto;
+}
+
+p a, li a {
+    color: $primary-7;
+}
+
+:is(p, li) a:hover, a :is(h4, h5, h6):hover {
+    text-decoration: underline solid 2px $primary-1;
+}
+
+img.banner {
+    max-width: 90vw; 
+}
+
+.degree-heading > .degree-title {
+    font-size: $normal-size * 2;
+    margin-bottom: 0;
+}
+
+.degree-heading > .degree-dates {
+    font-size: $normal-size * 1.5;
+    color: $grey-3;
+}
+
+.logo {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+}
+
+.contact-method {
+    list-style-type: none;
+}
+
+.contact-method a {
+    text-decoration: none;
+}
+
+/* Site Header */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: $grey-2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+}
+
+header h1 {
+    font-size: $normal-size * 2;
+}
+
+#siteTitle {
+    margin: 0;
+}
+
+#siteTitle a {
+    text-decoration: none;
+    color: $primary-7;
+    padding-left: 1rem;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav-item {
+    padding: 0;
+    float: left;
+}
+
+.nav-item:hover {
+    background-color: $grey-1;
+}
+
+.nav-link {
+    display: block;
+    text-align: center;
+    padding: $normal-size;
+    text-decoration: none;
+    color: $grey-9;
+}
+
+/* Site Footer */
+
+footer {
+    margin: ($normal-size * 2) 0;
+    border-top: 1px solid $grey-1;
+    text-align: center;
+    font-size: $normal-size * 0.75;
+    padding-top: $normal-size * 0.5;
+}
