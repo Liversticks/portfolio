@@ -14,13 +14,6 @@
     font-style: normal;
 }
 
-@import "font-awesome/fontawesome.scss";
-@import "font-awesome/solid.scss";
-@import "font-awesome/brands.scss";
-
-/* may not be necessary */
-$fa-font-path: "../fonts";
-
 $body-text: 'libre_caslon_textregular';
 $heading-text: 'source_sans_proregular';
 
@@ -76,10 +69,14 @@ $accent-1: hsl(184, 92%, 32%);
 }
 
 /* Every Layout: Sidebar pattern */
-.sidebar {
+%flex-wrap {
     display: flex;
     flex-wrap: wrap;
     gap: $normal-size;
+}
+
+.sidebar {
+    @extend %flex-wrap;
 }
 
 .sidebar > :first-child {
@@ -242,11 +239,8 @@ img.banner {
     color: $grey-3;
 }
 
-.sidebar > .text-container {
-    flex-basis: auto;
-    flex-grow: 1;
-    min-width: 35ch;
-    max-width: 75ch;
+.flex-wrap {
+    @extend %flex-wrap;
 }
 
 #skills {
@@ -257,33 +251,6 @@ img.banner {
     width: 1rem;
     height: 1rem;
     margin-right: 0.25rem;
-}
-
-.github {
-    @extend %fa-icon;
-    @extend .fab;
-
-    &:before {
-        content: fa-content($fa-var-github);
-    }
-}
-
-.linkedin {
-    @extend %fa-icon;
-    @extend .fab;
-
-    &:before {
-        content: fa-content($fa-var-linkedin);
-    }
-}
-
-.envelope {
-    @extend %fa-icon;
-    @extend .fas;
-
-    &:before {
-        content: fa-content($fa-var-envelope);
-    }
 }
 
 .contact-method {
