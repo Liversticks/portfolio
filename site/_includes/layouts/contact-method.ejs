@@ -1,0 +1,9 @@
+<a class='contact-link' href="<%= contactLink %>" rel="noreferrer" target="_blank">
+    <div class="contact-method stack">
+        <span class='contact-icon icon-<%= contactIcon %>'></span>
+        <% if (contactUsername) { %>
+            <span><%= contactUsername %></span>
+        <% } %>
+        <span><%= contactFlavor %></span>
+    </div>
+</a>

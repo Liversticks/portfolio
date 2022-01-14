@@ -257,12 +257,41 @@ ul.no-bullets {
     list-style-type: none;
 }
 
-.contact-method {
+.contact-list {
+    @extend %flex-wrap;
     list-style-type: none;
+    padding: 0;
 }
 
-.contact-method a {
+.contact-method {
+    height: $normal-size * 16;
+    width: $normal-size * 16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $normal-size * 2;
+    background-color: $grey-8;
+    color: $primary-2;
+}
+
+.contact-method span:not(.contact-icon) {
+    font-family: $heading-text;
+}
+
+.contact-method:hover {
+    background-color: $primary-8;
+}
+
+.contact-icon::before {
+    font-size: $normal-size * 4;
+}
+
+a.contact-link:hover {
     text-decoration: none;
+}
+
+.contact-method > :last-child {
+    font-weight: bold;
 }
 
 /* Site Header */

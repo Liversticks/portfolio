@@ -2,32 +2,33 @@
 layout: main.ejs
 title: Contact Oliver Xie
 description: LiverHub (Oliver Xie/liversticks) contact links
+contacts:
+    - icon: github
+      flavor: GitHub Profile
+      username: liversticks
+      link: https://www.github.com/liversticks
+    - icon: linkedin
+      flavor: LinkedIn Profile
+      link: https://www.linkedin.com/in/the-oliver-xie
+    - icon: envelope
+      flavor: My Email
+      link: mailto:oxie@sfu.ca
 github: https://www.github.com/liversticks
 linkedin: https://www.linkedin.com/in/the-oliver-xie
 email: mailto:oxie@sfu.ca
 ---
 <article class='stack'>
-    <section id="contacts">
-        <h1>Contact Me</h1>
-        <ul class="contact-method">
+    <h1>Contact Me</h1>
+    <ul class="contact-list">
+        <% contacts.map(contact => { %>
             <li>
-                <a href="<%= github %>" rel="noreferrer" target="_blank">
-                    <i class='icon-github'></i>
-                    GitHub Profile
-                </a>
+            <%- include('_includes/layouts/contact-method.ejs', {
+                contactLink: contact.link,
+                contactIcon: contact.icon,
+                contactUsername: contact.username,
+                contactFlavor: contact.flavor
+            }) %>
             </li>
-            <li>
-                <a href="<%= linkedin %>" rel="noreferrer" target="_blank">
-                    <i class='icon-linkedin'></i>
-                    LinkedIn Profile
-                </a>
-            </li>
-            <li>
-                <a href="<%= email %>">
-                    <i class='icon-envelope'></i>
-                    My Email
-                </a>
-            </li>
-        </ul>
-    </section>
+        <% }) %>
+    </ul>
 </article>
