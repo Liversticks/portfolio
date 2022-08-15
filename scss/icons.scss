@@ -139,3 +139,21 @@ $fa-font-path: "../fonts";
         content: fa-content($fa-var-ubuntu);
     }
 }
+
+.icon-aws {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-aws);
+    }
+}
+
+.icon-linux {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-linux);
+    }
+}

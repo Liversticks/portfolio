@@ -1,0 +1,18 @@
+<li>
+    <% if(icon) { %>
+        <i class="<%= icon %>"></i>
+    <% } %>
+    <%= name %>
+    <% if(subitems) { %>
+    <ul>
+        <% subitems.forEach(item => { %>
+            <li>
+                <% if(item.icon) { %>
+                    <i class="<%= item.icon%>"></i>
+                <% } %>
+                <%= item.text %>
+            </li>
+        <% }) %>
+    </ul>
+    <% } %>
+</li>

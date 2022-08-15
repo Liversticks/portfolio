@@ -10,7 +10,14 @@ cards:
       subtitle: Amazon Web Services
       dates: May 2022 - August 2022
       bullets:
-        - I'm looking forward to interning at Amazon! I want to demonstrate how much I have learned over the past year by contributing to global-scale services.
+        - Implemented customer-facing metrics for an upcoming serverless application integration service in Amazon EventBridge. This service will support 250K+ TPS at launch.
+        - Defined metric names, dimensions, units, resolutions, and measurements for CloudWatch Metrics dashboards and APIs. Led the requirements gathering process with the team, product manager, and other customer-facing staff.
+        - Adapted internal monitoring agent to run in a sidecar container pattern for ECS/Fargate service.
+        - Continuously deployed code and infrastructure using AWS Cloud Development Kit (CDK) and AWS CloudFormation.
+        - Wrote unit tests using JUnit and Mockito.
+        - Fixed bugs in team development environments: Postman collections, IntelliJ run configurations, and an internal multi-container testing tool (similar to Docker Compose).
+        - Wrote and iterated a design document for the vended metrics project.
+        - Participated in design reviews and code reviews for the team.
     - src: /static/images/ch-logo-94px.svg
       imgLink: https://www.changehealthcare.com/
       alt: Change Healthcare corporate logo
@@ -26,6 +33,84 @@ cards:
         - Refactored Visual C++ backend modules using static analysis and eliminated over 50 resource leaks.
         - Updated existing tests and wrote new ones for legacy codebase.
         - Finished second place in company-wide Pacman hackathon and contributed to the pathfinding AI for ghosts and Pacman.
+languages:
+    - name: Java
+      icon: icon-java
+    - name: C#
+      icon: icon-csharp
+      subitems:
+        - text: .NET
+        - text: ASP.NET Core
+    - name: JavaScript
+      icon: icon-javascript
+      subitems:
+        - text: TypeScript
+        - text: Node.js
+          icon: icon-node-js
+        - text: React
+          icon: icon-react
+        - text: jQuery
+    - name: Python
+      icon: icon-python
+      subitems:
+        - text: Django
+        - text: NumPy
+        - text: Pandas
+    - name: SQL
+      icon: icon-database
+      subitems:
+        - text: PostgreSQL
+          icon: icon-postgres
+        - text: MS SQL Server
+        - text: SQLite
+    - name: HTML
+      icon: icon-html5
+    - name: CSS
+      icon: icon-css3
+    - name: Golang
+      icon: icon-golang
+    - name: C
+      icon: icon-c
+    - name: C++
+      icon: icon-cpp
+tools:
+    - name: NoSQL Databases
+      icon: icon-database
+      subitems:
+        - text: DynamoDB
+        - text: Cosmos DB
+        - text: Couchbase
+          icon: icon-couchbase
+    - name: Docker
+      icon: icon-docker
+    - name: AWS
+      icon: icon-aws
+      subitems:
+        - text: Elastic Container Service (ECS)
+        - text: Fargate
+        - text: Lambda
+        - text: CloudFormation
+        - text: Cloud Development Kit (CDK)
+        - text: CloudWatch Metrics
+    - name: Microsoft Azure
+      icon: icon-azure
+      subitems:
+        - text: Functions
+        - text: Static App Service
+    - name: Nginx
+      icon: icon-nginx
+    - name: Git
+      icon: icon-git
+    - name: Apache Spark
+      icon: icon-spark
+    - name: Windows
+      icon: icon-windows
+    - name: Linux
+      icon: icon-linux
+      subitems:
+        - text: Ubuntu
+          icon: icon-ubuntu
+    
 ---
 <article class='stack'>
     <h1 class='heading'><%= title %></h1>
@@ -49,55 +134,25 @@ cards:
             <div class="text-container">
                 <h3>Languages</h3>
                 <ul>
-                    <li><i class='icon-csharp'></i> C#
-                        <ul>
-                            <li>.NET</li>
-                            <li>ASP.NET Core</li>
-                        </ul>
-                    </li>
-                    <li><i class='icon-python'></i> Python
-                        <ul >
-                            <li>Numpy</li>
-                            <li>Pandas</li>
-                        </ul>
-                    </li>
-                    <li><i class='icon-javascript'></i> JavaScript
-                        <ul>
-                            <li><i class='icon-node-js'></i> Node.js</li>
-                            <li><i class='icon-react'></i> React</li>
-                        </ul>
-                    </li>
-                    <li><i class='icon-html5'></i> HTML</li>
-                    <li><i class='icon-css3'></i> CSS</li>
-                    <li><i class='icon-c'></i> C</li>
-                    <li><i class='icon-java'></i> Java</li>
-                    <li><i class='icon-cpp'></i> C++</li>
+                <% languages.forEach(lang => { %>
+                    <%- include('_includes/layouts/skill.ejs', {
+                        name: lang.name,
+                        icon: lang.icon,
+                        subitems: lang.subitems
+                    }) %>
+                <% }) %>
                 </ul>
             </div>
             <div class="text-container">
-                <h3>Tools/Utilities</h3>
+                <h3>Tools/Platforms</h3>
                 <ul>
-                    <li><i class='icon-database'></i> SQL/Relational Databases
-                        <ul>
-                            <li><i class='icon-postgres'></i> PostgreSQL</li>
-                            <li>MS SQL Server</li>
-                            <li>SQLite</li>
-                        </ul>
-                    </li>
-                    <li><i class='icon-database'></i> NoSQL Databases
-                        <ul>
-                            <li><i class='icon-couchbase'></i> Couchbase</li>
-                            <li><i class='icon-azure'></i> Azure Cosmos DB</li>
-                        </ul>
-                    </li>
-                    <li><i class='icon-docker'></i> Docker</li>
-                    <li><i class='icon-nginx'></i> Nginx</li>
-                    <li><i class='icon-spark'></i> Apache Spark</li>
-                    <li><i class='icon-git'></i> Git</li>
-                    <li><i class='icon-azure'></i> Microsoft Azure</li>
-                    <li><i class='icon-windows'></i> Windows</li>
-                    <li><i class='icon-ubuntu'></i> Ubuntu</li>
-
+                    <% tools.forEach(tool => { %>
+                        <%- include('_includes/layouts/skill.ejs', {
+                            name: tool.name,
+                            icon: tool.icon,
+                            subitems: tool.subitems
+                        }) %>
+                    <% }) %>
                 </ul>
             </div>
         </section>
