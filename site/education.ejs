@@ -2,6 +2,7 @@
 layout: main.ejs
 title: My Education
 description: Where Oliver Xie studied/went to school
+currentGPA: 3.84
 courseCards:
     - title: Software Testing, Reliability, and Security
       subtitle: CMPT 473
@@ -72,6 +73,13 @@ courseCards:
       subtitle: CMPT 225
       bullets:
         - Learned about and implemented data structures/algorithms such as AVL trees, heaps, hash tables, and various sorting algorithms in C++.
+extracurriculars:
+  - I am currently the <em>Director of Events</em> for the SFU Computing Science Student Society (CSSS).
+  - I served as the <em>First-Year Representative</em> for the CSSS. For this eight-month role, I planned two student social events; assisted in the running of a hackathon and biweekly board games nights; and managed access to the the exam bank.
+  - As a <em>CS Peer Tutor</em>, I helped first and second-year students with their coursework while also fostering independent inquiry and analysis skills. My ability to read and reason with others' code improved tremendously because I was doing that all the time. 
+  - I introduced new students to SFU as a <em>HIVE Leader</em> (hybrid orientation leader) and <em>Wayfinding Champion</em> (tour guide). I always answered any inquiry future students had about academics, locations, and social life at university and organized Q-and-A sessions/games for them.
+  - Continuing my public speaking experience from high school, I joined the Burnaby Mountain Toastmasters club where I delivered prepared/impromptu speeches and helped run meetings as a club member. I am currently the <em>Secretary</em> of this club.
+  - I played tenor saxophone for the SFU Jazz Band.
 ---
 <article class='stack'>
     <h1><%= title %></h1>
@@ -89,7 +97,7 @@ courseCards:
       </div>
       <section id='academics' class='text-container'>
         <h4>Academic Performance</h4>
-        <p>I currently have a 3.8 GPA and received the Dean's Honour Roll three times.</p>
+        <p>I currently have a <%= currentGPA %> GPA and received the Dean's Honour Roll three times.</p>
         <p>I am a recipient of the Undergraduate Scholars Entrance Scholarship (USES), a <em>full-ride scholarship </em>
             that recognizes students of high academic achievement who are also involved in their communities.
         </p>
@@ -114,20 +122,9 @@ courseCards:
     </section>
     <section id='extracurriculars' class='text-container'>
         <h4>Extracurriculars</h4>
-        <p>I served as the <em>First-Year Representative</em> for the SFU Computing Science Student Society (CSSS). As part of this eight-month role,
-            I planned two student social events; assisted in the running of a hackathon and biweekly board games nights; and managed access
-            to the the exam bank.
-        </p>
-        <p>As a <em>CS Peer Tutor</em>, I helped first and second-year students with their coursework while also fostering independent inquiry and analysis skills.
-            My ability to read and reason with others' code improved tremendously because I was doing that all the time. 
-        </p>
-        <p>I introduced new students to SFU as a <em>HIVE Leader</em> (virtual orientation leader) and <em>Wayfinding Champion</em> (tour guide). I always answered any inquiry future students had about academics,
-            locations, and social life at university and organized Q-and-A sessions/games for them.
-        </p>
-        <p>Continuing my public speaking experience from high school, I joined the Burnaby Mountain Toastmasters club where I delievered prepared/impromptu speeches
-            and helped run meetings as a club member.
-        </p>
-        <p>I played tenor saxophone for the SFU Jazz Band.</p>
+        <% extracurriculars.forEach(item => { %>
+          <p><%- item %></p>  
+        <% }) %>
     </section>
   </section>
 </article>
