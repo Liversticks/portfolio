@@ -82,7 +82,6 @@ tools:
         - text: DynamoDB
         - text: Cosmos DB
         - text: Couchbase
-          icon: icon-couchbase
     - name: Docker
       icon: icon-docker
     - name: AWS
@@ -135,7 +134,7 @@ tools:
         <section id='skills' class='flex-wrap'>
             <div class="text-container">
                 <h3>Languages</h3>
-                <ul>
+                <ul class="no-bullets">
                 <% languages.forEach(lang => { %>
                     <%- include('_includes/layouts/skill.ejs', {
                         name: lang.name,
@@ -147,7 +146,7 @@ tools:
             </div>
             <div class="text-container">
                 <h3>Tools/Platforms</h3>
-                <ul>
+                <ul class="no-bullets">
                     <% tools.forEach(tool => { %>
                         <%- include('_includes/layouts/skill.ejs', {
                             name: tool.name,

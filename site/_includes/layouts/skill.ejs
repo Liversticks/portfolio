@@ -1,14 +1,17 @@
 <li>
     <% if(icon) { %>
         <i class="<%= icon %>"></i>
+        <span class="icon-spacer"></span>
     <% } %>
+    
     <%= name %>
     <% if(subitems) { %>
-    <ul>
+    <ul class="no-bullets">
         <% subitems.forEach(item => { %>
             <li>
                 <% if(item.icon) { %>
                     <i class="<%= item.icon%>"></i>
+                    <span class="icon-spacer"></span>
                 <% } %>
                 <%= item.text %>
             </li>
