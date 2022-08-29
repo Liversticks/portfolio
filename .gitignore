@@ -1,6 +1,8 @@
 node_modules/
 _site/
 
+package-lock.json
+
 # TODO: do something about normalize.css
 site/static/css/
 !site/static/css/normalize.css
