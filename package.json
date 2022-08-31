@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @11ty/eleventy --input=site --formats=html,ejs,css,md",
     "clean": "rmdir _site /s /q && rm -rf ./_site",
-    "serve": "npx @11ty/eleventy --input=site --serve"
+    "serve-win": "xcopy fonts-production\\fonts _site\\static\\fonts\\ /y /i && xcopy fonts-production\\icons.css _site\\static\\css\\ /y /i && npx @11ty/eleventy --input=site --serve"
   },
   "keywords": [],
   "author": "liversticks",
