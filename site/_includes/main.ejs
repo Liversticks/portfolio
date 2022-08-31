@@ -9,8 +9,6 @@ menuLinks:
       name: Projects
     - link: /awards
       name: Awards
-    - link: /contact
-      name: Contact
     - link: /blog
       name: Blog
 ---
@@ -24,6 +22,11 @@ menuLinks:
     <link rel="stylesheet" href="/static/css/site.css" />
     <link rel="stylesheet" href="/static/css/icons.css" />
     <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <% if(typeof stylesheets !== 'undefined') { 
+      stylesheets.forEach(sheet => { %>
+        <link rel="stylesheet" href="<%= sheet %>" />
+     <% })
+    } %>
     <title><%= title %></title>
     <meta name="description" content="<%= description %>" />
 </head>
