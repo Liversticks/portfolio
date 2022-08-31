@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @11ty/eleventy --input=site --formats=html,ejs,css",
+    "build": "npx @11ty/eleventy --input=site --formats=html,ejs,css,md",
     "clean": "rmdir _site /s /q && rm -rf ./_site",
     "serve": "npx @11ty/eleventy --input=site --serve"
   },

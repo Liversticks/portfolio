@@ -1,0 +1,38 @@
+---
+layout: main.ejs
+title: LiverHub Blog Posts
+description: Technical, academic, and career-focused blog posts from Oliver Xie.
+postList:
+    - month: "August 2022"
+      posts:
+        - date: "08/30"
+          title: Programmer Path - Part IV
+          link: "/blog/programmer_path_IV"
+        - date: "08/30"
+          title: Programmer Path - Part III
+          link: "/blog/programmer_path_III"
+        - date: "08/30"
+          title: Programmer Path - Part II
+          link: "/blog/programmer_path_II"
+        - date: "08/30"
+          title: Programmer Path - Part I
+          link: "/blog/programmer_path_I"
+        - date: "08/29"
+          title: Amazon Internship Timeline
+          link: "/blog/amzn_intern_timeline"
+---
+<div class="stack">
+    <h1>LiverHub Blog Posts</h1>
+    <% postList.forEach(month => { %>
+        <section class="center">
+            <h2><%= month.month %></h2>
+            <ul class="blog-post-list">
+                <% month.posts.forEach(post => { %>
+                    <li><%= post.date %> - <a href="<%= post.link %>"><%= post.title %></a></li>
+                <% }) %>
+            </ul>
+        </section>
+    <% }) %>
+</div>
+
+
