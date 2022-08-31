@@ -10,14 +10,13 @@ cards:
       subtitle: Amazon Web Services
       dates: May 2022 - August 2022
       bullets:
-        - Implemented customer-facing metrics for an upcoming serverless application integration service in Amazon EventBridge. This service will support 250K+ TPS at launch.
-        - Defined metric names, dimensions, units, resolutions, and measurements for CloudWatch Metrics dashboards and APIs. Led the requirements gathering process with the team, product manager, and other customer-facing staff.
-        - Adapted internal monitoring agent to run in a sidecar container pattern for ECS/Fargate service.
+        - Defined 10+ customer-facing metrics: names, dimensions, units, resolutions, and measurements published to CloudWatch Metrics for a future application integration service in Amazon EventBridge which will support 250K+ TPS at launch.
+        - Adapted internal monitoring agent to run in a sidecar container pattern for ECS/Fargate service with minimal additional latency on the service critical path.
+        - Created a deployment pipeline for AWS accounts and IAM roles scoped for metrics upload, limiting blast radius and automatically creating resources for all stage (gamma, prod), region, and cell (sub-regional) units.
         - Continuously deployed code and infrastructure using AWS Cloud Development Kit (CDK) and AWS CloudFormation.
-        - Wrote unit tests using JUnit and Mockito.
-        - "Fixed bugs in team development environments: Postman collections, IntelliJ run configurations, and an internal multi-container testing tool (similar to Docker Compose)."
-        - Wrote and iterated a design document for the vended metrics project.
-        - Participated in design reviews and code reviews for the team.
+        - Wrote unit tests using JUnit and Mockito and improved package code coverage to 90% by testing empty input cases.
+        - Fixed bugs in Postman collections, IntelliJ run configurations, and an internal multi-container testing tool (similar to Docker Compose), reducing development toil.
+        - Wrote and iterated a design document for the vended metrics project and led the requirements gathering process with the team, product manager, and other customer-facing staff.
     - src: /static/images/ch-logo-94px.svg
       imgLink: https://www.changehealthcare.com/
       alt: Change Healthcare corporate logo
@@ -25,14 +24,13 @@ cards:
       subtitle: Change Healthcare
       dates: September 2020 - April 2021
       bullets:
-        - Conducted an alternatives analysis for an Identity Server (C# ASP.NET Core) version upgrade.
-        - Implemented upgraded version using SOLID principles while minimizing impact to existing configuration and system integration.
-        - Improved security for a key component of all Change Healthcare Radiology Solutions deployed at hospitals. 
+        - Led ASP.NET Core (C#) identity server security upgrade for all Change Healthcare Radiology Solutions instances globally, eliminating 5 major CVEs.
+        - Refactored code to use SOLID principles while maintaining existing configuration, logging output, and Couchbase database access.
         - Secured an image/DICOM file-upload API endpoint in the C# PACS backend.
         - Ported 30+ hotfixes over a 2-week sprint to support a national healthcare agency product upgrade.
-        - Refactored Visual C++ backend modules using static analysis and eliminated over 50 resource leaks.
-        - Updated existing tests and wrote new ones for legacy codebase.
+        - Refactored Visual C++ backend modules using static analysis, eliminated over 50 resource leaks, and improved test coverage.
         - Finished second place in company-wide Pacman hackathon and contributed to the pathfinding AI for ghosts and Pacman.
+resumePath: /static/oxie_resume.pdf
 languages:
     - name: Java
       icon: icon-java
@@ -164,9 +162,9 @@ tools:
             month: 'long',
             day: 'numeric'
         }) %>)</h2>
-        <object class="pdf-viewer" data="/static/oxie_resume.pdf" type="application/pdf">
-            <embed class="pdf-viewer" src="/static/oxie_resume.pdf" type="application/pdf">
-                <p>Download my résumé as PDF <a href="/static/oxie_resume.pdf">here</a>.</p>
+        <object class="pdf-viewer" data="<%= resumePath %>" type="application/pdf">
+            <embed class="pdf-viewer" src="<%= resumePath %>" type="application/pdf">
+                <p><a href="<%= resumePath %>">Download my résumé as PDF</a></p>
             </embed>
         </object>
     </section>
