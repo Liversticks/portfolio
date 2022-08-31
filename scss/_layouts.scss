@@ -1,0 +1,7 @@
+$normal-size: 16px;
+
+%flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $normal-size;
+}

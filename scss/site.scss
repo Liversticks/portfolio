@@ -1,49 +1,12 @@
-@font-face {
-    font-family: 'libre_caslon_textregular';
-    src: url('/static/fonts/librecaslontext-regular-webfont.woff2') format('woff2'),
-         url('/static/fonts/librecaslontext-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'source_sans_proregular';
-    src: url('/static/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
-         url('/static/fonts/sourcesanspro-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-$body-text: 'libre_caslon_textregular';
-$heading-text: 'source_sans_proregular';
+@use "colors";
+@use "fonts";
 
 /* Adapted from Refactoring UI */
 $normal-size: 16px;
 
+$max-text-width: 75ch;
+
 $left-align: $normal-size * 0.5;
-
-$grey-1: hsl(252, 10%, 10%); 
-$grey-2: hsl(263, 6%, 20%);
-$grey-3: hsl(273, 6%, 39%);
-$grey-4: hsl(273, 4%, 45%);
-$grey-5: hsl(300, 2%, 56%);
-$grey-6: hsl(300, 2%, 63%);
-$grey-7: hsl(300, 4%, 74%);
-$grey-8: hsl(276, 5%, 82%);
-$grey-9: hsl(348, 20%, 93%);
-$grey-10: hsl(355, 20%, 96%);
-
-$primary-1: hsl(223, 83%, 23%);
-$primary-2: hsl(223, 67%, 29%);
-$primary-3: hsl(223, 53%, 36%);
-$primary-4: hsl(223, 45%, 42%);
-$primary-5: hsl(224, 38%, 50%);
-$primary-6: hsl(224, 40%, 57%);
-$primary-7: hsl(224, 48%, 65%);
-$primary-8: hsl(224, 57%, 75%);
-$primary-9: hsl(224, 73%, 85%);
-
-$accent-1: hsl(184, 92%, 32%);
 
 /* Every Layout: Stack pattern */
 .stack {
@@ -95,7 +58,7 @@ main {
 }
 
 html {
-    background-color: $grey-10;
+    background-color: colors.$grey-10;
 }
 
 a {
@@ -103,17 +66,17 @@ a {
 }
 
 h1, h2, h3, h4, #siteTitle {
-    font-family: $heading-text;
+    font-family: fonts.$heading-text;
 }
 
-p, li, footer {
-    font-family: $body-text;
+p, li, footer, span {
+    font-family: fonts.$body-text;
     line-height: 1.25;
 }
 
 h1 {
     font-size: $normal-size * 4;
-    color: $grey-1;
+    color: colors.$grey-1;
 }
 
 h2 {
@@ -123,7 +86,7 @@ h2 {
 
 h3 {
     font-size: $normal-size * 3;
-    color: $grey-4;
+    color: colors.$grey-4;
 }
 
 h4 {
@@ -133,7 +96,7 @@ h4 {
 }
 
 .text-container {
-    max-width: 75ch;
+    max-width: $max-text-width;
     min-width: 35ch;
 }
 
@@ -161,23 +124,23 @@ section.card {
 }
 
 .card h1 {
-    color: $primary-1;
+    color: colors.$primary-1;
     font-size: $normal-size * 2;
 }
 
 .card h2 {
-    color: $primary-5;
+    color: colors.$primary-5;
     font-size: $normal-size * 1.5;
 }
 
 .card h3 {
-    color: $primary-6;
+    color: colors.$primary-6;
     font-weight: normal;
     font-size: $normal-size * 1.5;
 }
 
 .card h4 {
-    color: $primary-8;
+    color: colors.$primary-8;
     font-weight: normal;
     font-size: $normal-size * 1.5;
     margin: 0;
@@ -208,7 +171,7 @@ ul.external-links {
 em {
     font-style: normal;
     font-weight: bolder;
-    color: $accent-1;
+    color: colors.$accent-1;
 }
 
 .pdf-viewer {
@@ -219,11 +182,11 @@ em {
 }
 
 p a, li a {
-    color: $primary-7;
+    color: colors.$primary-7;
 }
 
 :is(p, li) a:hover, a :is(h4, h5, h6):hover {
-    text-decoration: underline solid 2px $primary-1;
+    text-decoration: underline solid 2px colors.$primary-1;
 }
 
 img.banner {
@@ -237,7 +200,7 @@ img.banner {
 
 .degree-heading > .degree-dates {
     font-size: $normal-size * 1.5;
-    color: $grey-3;
+    color: colors.$grey-3;
 }
 
 .flex-wrap {
@@ -258,48 +221,6 @@ ul.no-bullets {
     list-style-type: none;
 }
 
-.contact-list {
-    @extend %flex-wrap;
-    list-style-type: none;
-    padding: 0;
-}
-
-.icon-spacer {
-    display: inline-block;
-    width: 3px;
-}
-
-.contact-method {
-    height: $normal-size * 16;
-    width: $normal-size * 16;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: $normal-size * 2;
-    background-color: $grey-8;
-    color: $primary-2;
-}
-
-.contact-method span:not(.contact-icon) {
-    font-family: $heading-text;
-}
-
-.contact-method:hover {
-    background-color: $primary-8;
-}
-
-.contact-icon::before {
-    font-size: $normal-size * 4;
-}
-
-a.contact-link:hover {
-    text-decoration: none;
-}
-
-.contact-method > :last-child {
-    font-weight: bold;
-}
-
 /* Site Header */
 #siteTitle {
     font-size: $normal-size * 2;
@@ -308,14 +229,14 @@ a.contact-link:hover {
 
 #siteTitle a {
     text-decoration: none;
-    color: $primary-7;
+    color: colors.$primary-7;
 }
 
 nav {
-    background-color: $grey-2;
+    background-color: colors.$grey-2;
 }
 span.icon-bar {
-    background-color: $grey-9;
+    background-color: colors.$grey-9;
     width: 24px;
     height: 2px;
 }
@@ -323,11 +244,11 @@ span.icon-bar {
 .nav > li > a:hover,
 .nav > li > a:focus {
     text-decoration: none;
-    background-color: $grey-1;
+    background-color: colors.$grey-1;
 }
 
 .nav > li > a {
-    color: $grey-9;
+    color: colors.$grey-9;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
@@ -340,7 +261,7 @@ span.icon-bar {
 
 footer {
     margin: ($normal-size * 2) 0;
-    border-top: 1px solid $grey-1;
+    border-top: 1px solid colors.$grey-1;
     text-align: center;
     font-size: $normal-size * 0.75;
     padding-top: $normal-size * 0.5;
@@ -353,5 +274,5 @@ ul.blog-post-list {
 
 #blog-post h3 {
     font-size: $normal-size * 2;
-    color: $grey-1;
+    color: colors.$grey-1;
 }

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'libre_caslon_textregular';
+    src: url('/static/fonts/librecaslontext-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/librecaslontext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_sans_proregular';
+    src: url('/static/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('/static/fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$body-text: 'libre_caslon_textregular';
+$heading-text: 'source_sans_proregular';
