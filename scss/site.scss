@@ -121,6 +121,7 @@ section.card {
     margin-bottom: $normal-size * 0.25;
     margin-left: $left-align;
     align-self: flex-start;
+    max-width: 40ch; /* prevent unequal card spacing */
 }
 
 .card h1 {
