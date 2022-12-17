@@ -2,7 +2,7 @@
 layout: main.ejs
 title: My Education
 description: Where Oliver Xie studied/went to school
-currentGPA: 3.84
+currentGPA: 3.87
 courseCards:
     - title: Software Testing, Reliability, and Security
       subtitle: CMPT 473
@@ -85,13 +85,22 @@ courseCards:
       subtitle: CMPT 225
       bullets:
         - Learned about and implemented data structures/algorithms such as AVL trees, heaps, hash tables, and various sorting algorithms in C++.
+
+doe:
+    about: "I am currently the <em>Director of Events</em> for the SFU Computing Science Student Society (CSSS). Key successes under my watch include:"
+    points:
+      - "Fall Hacks 2022: We had 50% more participants at the CSSS's annual beginner-friendly hackathon that I organized compared to past years."
+      - "Frosh Week 2022: I served as grill chef for a barbecue and a overnight supervisor for Midnight Madness."
+      - We held multiple collaborative events with other student groups such as a typing competition (with the Mechanical Keyboard Club) and an ice skating night (with the Linguistics Student Union).
+      - I organized a mentorship program for the CSSS where first-year students were paired with senior students for advice on courses, careers, and more.
+      - I handled registration and payments for a dessert crawl and Ultimate Frisbee game.
+      - I chaired an Events Committee that organized and ran events such as Git and LaTeX workshops; Halloween trick-or-treating, gingerbread decorating, LAN parties, a programming contest, and karaoke nights.
 extracurriculars:
-  - I am currently the <em>Director of Events</em> for the SFU Computing Science Student Society (CSSS).
-  - I served as the <em>First-Year Representative</em> for the CSSS. For this eight-month role, I planned two student social events; assisted in the running of a hackathon and biweekly board games nights; and managed access to the the exam bank.
+  - I served as the <em>First-Year Representative</em> for the CSSS. For this eight-month role, I planned two student social events; assisted in the running of a hackathon and biweekly board games nights; and managed access to the past exam bank.
   - As a <em>CS Peer Tutor</em>, I helped first and second-year students with their coursework while also fostering independent inquiry and analysis skills. My ability to read and reason with others' code improved tremendously because I was doing that all the time. 
   - I introduced new students to SFU as a <em>HIVE Leader</em> (hybrid orientation leader) and <em>Wayfinding Champion</em> (tour guide). I always answered any inquiry future students had about academics, locations, and social life at university and organized Q-and-A sessions/games for them.
   - Continuing my public speaking experience from high school, I joined the Burnaby Mountain Toastmasters club where I delivered prepared/impromptu speeches and helped run meetings as a club member. I am currently the <em>Secretary</em> of this club.
-  - I played tenor saxophone for the SFU Jazz Band.
+  - I played tenor saxophone for the SFU Jazz Band. I also sing as a tenor for the SFU Choir.
 ---
 <article class='stack'>
     <h1><%= title %></h1>
@@ -134,6 +143,13 @@ extracurriculars:
     </section>
     <section id='extracurriculars' class='text-container'>
         <h4>Extracurriculars</h4>
+        <p><%- doe.about %></p>
+        <ul>
+        <% doe.points.forEach(item => { %>
+          <li><%- item %></li>
+        <% }) %>
+        </ul>
+        
         <% extracurriculars.forEach(item => { %>
           <p><%- item %></p>  
         <% }) %>
